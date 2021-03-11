@@ -1,0 +1,63 @@
+//Check connection database
+GET http://localhost:5000/ HTTP/1.1
+
+###
+//Renew token 
+POST http://localhost:5000/token HTTP/1.1
+Content-Type: application/json
+
+{
+
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJ1MDAwMyIsImZpcnN0X25hbWUiOiLguKrguLjguJjguLTguJnguLHguJnguJfguYwiLCJsYXN0X25hbWUiOiLguJzguLTguKfguJnguKfguKUiLCJlbWFpbCI6InN1dGhpbmFucDYxQG51LmFjLnRoIiwidGVsIjoiMDk3MDQ4NDAyMyIsImFkZHJlc3MiOiIxMzEvMiDguKEuNyDguJUu4LiE4Lil4Lit4LiH4LiV4Liy4LilIOC4rS7guKjguKPguLXguKrguLPguYLguKPguIcg4LiILuC4quC4uOC5guC4guC4l-C4seC4oiA2NDEyMCIsInJvb21fbm8iOiIzMzE5IiwiaWF0IjoxNjE1NDkwOTE4fQ.yioy4paKL8dPtwV90Z3BzRCkL9sYIyPNSAWgI9l50Yk"
+
+}
+###
+
+//login
+POST http://localhost:5000/login HTTP/1.1
+Content-Type: application/json
+
+{
+
+    "email":"suthinanp61@nu.ac.th",
+    "password":"joe23072542"
+
+}
+
+###
+//Create user
+POST http://localhost:5000/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "uid":"U0003",
+    "password":"joe23072542",
+    "first_name":"สุธินันท์",
+    "last_name":"ผิวนวล",
+    "email":"suthinanp61@nu.ac.th",
+    "tel":"0970484023",
+    "address":"131/2 ม.7 ต.คลองตาล อ.ศรีสำโรง จ.สุโขทัย 64120",
+    "room_no":"3319"
+
+}
+
+###
+//DELETE USER
+DELETE http://localhost:5000/user HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJ1MDAwMyIsImVtYWlsIjoic3V0aGluYW5wNjFAbnUuYWMudGgiLCJ0ZWwiOiIwOTcwNDg0MDIzIiwiYWRkcmVzcyI6IjEzMS8yIOC4oS43IOC4lS7guITguKXguK3guIfguJXguLLguKUg4LitLuC4qOC4o-C4teC4quC4s-C5guC4o-C4hyDguIgu4Liq4Li44LmC4LiC4LiX4Lix4LiiIDY0MTIwIiwicm9vbV9ubyI6IjMzMTkiLCJpYXQiOjE2MTU0OTA5NzUsImV4cCI6MTYxNTQ5MDk5NX0.wzR4SaqN4HXtALqHrxOBA9BYFNPOB8SWK9meAoMEyCk
+###
+//UPDATE USER
+PUT http://localhost:5000/user HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJVMDAwMyIsImVtYWlsIjoic3V0aGluYW5wNjFAbnUuYWMudGgiLCJ0ZWwiOiIwOTcwNDg0MDIzIiwiYWRkcmVzcyI6IjEzMS8yIOC4oS43IOC4lS7guITguKXguK3guIfguJXguLLguKUg4LitLuC4qOC4o-C4teC4quC4s-C5guC4o-C4hyDguIgu4Liq4Li44LmC4LiC4LiX4Lix4LiiIDY0MTIwIiwicm9vbV9ubyI6IjMzMTkiLCJpYXQiOjE2MTU0OTI5MTIsImV4cCI6MTYxNTQ5NjUxMn0.IAv2ROok-acpt6VwZB_r5W1OF026coSwUdfW5eR9guk
+Content-Type: application/json
+
+{
+
+    "first_name":"สุธินันท์",
+    "last_name":"ผิวนวล",
+    "tel":"0970484023",
+    "address":"131/2 ม.7 ต.คลองตาล อ.ศรีสำโรง จ.สุโขทัย 64120",
+    "room_no":"3300"
+
+}
+

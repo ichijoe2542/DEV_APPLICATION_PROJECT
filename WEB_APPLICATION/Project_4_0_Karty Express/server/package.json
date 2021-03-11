@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "Ichijoe",
+  "author": "D Jirasak",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

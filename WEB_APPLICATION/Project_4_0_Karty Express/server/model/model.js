@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 var trackSchema = mongoose.Schema({
     track_no: String,
     s_name: String,
@@ -11,7 +10,7 @@ var trackSchema = mongoose.Schema({
     r_province: String,
     dateEnter: Date,
     shipmentStatus: Array,
-    shipment: Array,
+    shipment: Array
 });
-var trackObj = mongoose.model('trackobj',trackSchema);
+var trackObj = mongoose.model('trackobj', trackSchema);
 module.exports = trackObj;
