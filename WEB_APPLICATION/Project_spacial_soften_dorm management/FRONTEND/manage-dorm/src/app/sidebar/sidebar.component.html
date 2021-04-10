@@ -11,7 +11,7 @@
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" *ngIf="isShow">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class = "image">
@@ -22,7 +22,7 @@
       >
       </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ data.first_name }} {{ data.last_name }}</a>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
+                <a href="/pos" class="nav-link">
                   <i class="nav-icon fas fa-box-open"></i>
                   <p>
                     เช็คพัสดุ
@@ -48,15 +48,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <button (click)="logout()" 
-                class="btn nav-link"
+                <div (click)="logout()" 
+                class="nav-link"
                 style="color: red; cursor: pointer"
                 >
                   <i class="nav-icon fas fa-sign-out-alt"></i>
                   <p>
                     ออกจากระบบ
                   </p>
-                </button>
+                </div>
               </li>
         </ul>
       </nav>
